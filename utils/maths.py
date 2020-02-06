@@ -30,13 +30,8 @@ def sum_c(collection):
     return sum_v
 
 def mean_c(collection):
-    '''  mean_v=0.0
-    count=1
-    for i in collection:
-        mean_v+=float(i)
-        i+=1
-    '''
-    return sum_c(collection)/float(len(i))
+    return sum_c(collection)/float(len(collection))
+
 '''
 
 variance = sum(xi-mean)**2/n
@@ -44,7 +39,7 @@ variance = sum(xi-mean)**2/n
 '''
 def variance_c(collection):
     mean = mean_c(collection)
-    variance_v = sum_c(list(map(lambda x:(x-mean)**2,collection)))/n
+    variance_v = sum_c(list(map(lambda x:(x-mean)**2,collection)))/(len(collection))
     return variance_v
 
 def standard_deviation(collection):

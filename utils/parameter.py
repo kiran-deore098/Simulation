@@ -1,15 +1,23 @@
 import sys
 import maths as m
+from numpy import exp,sqrt
 
 def uniform(data):
-    mean,var = m.mean_c(data),m.variance(data)
-    b = (2*mean+np.sqrt(12*var))/2
-    return b,2*mean-b
+    mean,var = m.mean_c(data),m.variance_c(data)
+    b = (2*mean+sqrt(12*var))/2
+    a = 2*mean-b
+    print(b,a)
+    return b,a
 
 
 def exponential(data):
-    lamb=(1/mean_c)
+    lamb=(1/m.mean_c(data))
     return lamb
+
+def cdf_of_exp(lamda,x):
+    cdf = 1-exp(-lamda*x)
+    #print(cdf)
+    return cdf
 
 def normal(data):
     return
@@ -25,3 +33,5 @@ def gamma(data):
 
 def weibull(data):
     return 
+
+#print(uniform([1,2,3,4]))
