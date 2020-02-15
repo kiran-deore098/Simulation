@@ -8,9 +8,8 @@
 	* utils  :- directory contains all basic functions required for distribution fitting process
 		    function names:- max_c,min_C,mean_c,varince_c,standrd devation		     
 
- 	* reader.py
-
-    	* test -this directory contain all testcases
+	* reader.py
+	* test -this directory contain all testcases
 
 	
 #### How to run
